@@ -1,7 +1,6 @@
 (function () {
-
   var global = global || this || window || Function('return this')();
-  var nx = global.nx || require('@feizheng/next-js-core2');
+  var nx = global.nx || require('@jswork/next');
 
   nx.triggerResize = function () {
     // For a full list of event types: https://developer.mozilla.org/en-US/docs/Web/API/document.createEvent
@@ -11,9 +10,7 @@
     el.dispatchEvent(event);
   };
 
-
   if (typeof module !== 'undefined' && module.exports) {
     module.exports = nx.triggerResize;
   }
-
-}());
+})();
